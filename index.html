@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Rehab 🌹✨</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;600;800&family=Dancing+Script:wght@700&family=Poppins:wght@400;600;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Cairo', 'Poppins', sans-serif;
+            background-color: #090a10;
+            color: white;
+            overflow-x: hidden;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="font-size:24px"><text y="20">🌹</text></svg>'), auto;
+        }
+
+        a, button, .cursor-pointer {
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" style="font-size:24px"><text y="20">✨</text></svg>'), pointer !important;
+        }
+
+        .magic-particle {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            font-size: 14px;
+            animation: particleFade 1s cubic-bezier(0, 0.9, 0.57, 1) forwards;
+        }
+        @keyframes particleFade {
+            0% { transform: translateY(0) scale(1) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(20px) scale(0) rotate(180deg); opacity: 0; }
+        }
+
+        .font-romantic { font-family: 'Amiri', serif; }
+        .font-english-script { font-family: 'Dancing Script', cursive; }
+        .font-english { font-family: 'Poppins', sans-serif; }
+        .font-hacker { font-family: 'Share Tech Mono', monospace; }
+
+        /* HIDE SCROLLBAR FOR REHABFLIX */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        /* CINEMATIC PARALLAX BG */
+        .bg-parallax-stars { background: url('https://www.transparenttextures.com/patterns/stardust.png'); animation: parallaxScroll 30s linear infinite; }
+        .bg-parallax-mountains { background: url('https://www.transparenttextures.com/patterns/black-scales.png'); opacity: 0.2; animation: parallaxScroll 15s linear infinite; }
+        @keyframes parallaxScroll { from { background-position: 0 0; } to { background-position: -1500px 0; } }
+
+        /* IPHONE STYLES */
+        .iphone-hardware {
+            position: relative; width: 340px; height: 674px; border-radius: 54px; background: #C8102E;
+            box-shadow: inset 0 0 10px rgba(255,255,255,0.3), inset 0 0 3px rgba(0,0,0,0.8), 0 30px 60px rgba(0,0,0,0.7);
+            display: flex; align-items: center; justify-content: center; z-index: 50;
+            transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.8s ease;
+            transform-style: preserve-3d;
+        }
+        .hw-btn { position: absolute; background: #A00820; box-shadow: inset -1px 0 2px rgba(255,255,255,0.2), inset 1px 0 2px rgba(0,0,0,0.6); }
+        .mute-switch { top: 110px; left: -4px; width: 4px; height: 26px; border-radius: 3px 0 0 3px; background: #400000; }
+        .vol-up { top: 165px; left: -4px; width: 4px; height: 50px; border-radius: 3px 0 0 3px; }
+        .vol-down { top: 235px; left: -4px; width: 4px; height: 50px; border-radius: 3px 0 0 3px; }
+        .power-btn { top: 185px; right: -4px; width: 4px; height: 75px; border-radius: 0 3px 3px 0; }
+        .iphone-xr { width: 320px; height: 654px; border: 10px solid #111; border-radius: 44px; position: relative; background-color: #000; overflow: hidden; box-shadow: inset 0 0 0 2px #050505; transform: translateZ(20px); }
+        .iphone-notch { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 155px; height: 32px; background-color: #111; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; z-index: 30; }
+        .iphone-notch::after { content: ''; position: absolute; right: 35px; top: 50%; transform: translateY(-50%); width: 10px; height: 10px; background: #080808; border: 1px solid #1a1a1a; border-radius: 50%; box-shadow: inset 0 0 3px rgba(255,255,255,0.2); }
+        .iphone-notch::before { content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 45px; height: 5px; background: #222; border-radius: 10px; box-shadow: inset 0 2px 2px rgba(0,0,0,0.8); }
+        .iphone-dock { position: absolute; bottom: 15px; left: 15px; right: 15px; height: 75px; background: rgba(255, 255, 255, 0.25); backdrop-filter: blur(15px); border-radius: 25px; z-index: 20; display: flex; justify-content: space-around; align-items: center; padding: 0 10px; }
+        .ios-app { width: 52px; height: 52px; border-radius: 13px; background-color: #fff; box-shadow: 0 3px 6px rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .ios-app img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.03); }
+        .app-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 11px; color: white; text-align: center; margin-top: 5px; text-shadow: 0 1px 3px rgba(0,0,0,0.9); }
+        .notif-anim { animation: slideDownNotif 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+        @keyframes slideDownNotif { 0% { transform: translate(-50%, -150%); opacity: 0; } 100% { transform: translate(-50%, 0); opacity: 1; } }
+        .iphone-zoom-out { transform: scale(3.5); opacity: 0; pointer-events: none; }
+
+        /* OTHER EXISTING ANIMATIONS */
+        @keyframes flicker { 0%, 100% { transform: scaleY(1) rotate(-2deg); opacity: 1; } 50% { transform: scaleY(1.18) rotate(2deg); opacity: 0.85; } }
+        .flame { animation: flicker 0.5s infinite alternate; transform-origin: bottom center; }
+        @keyframes fall { 0% { transform: translateY(-10vh) translateX(0) rotate(0deg); opacity: 1; } 50% { transform: translateY(50vh) translateX(25px) rotate(180deg); opacity: 0.9; } 100% { transform: translateY(105vh) translateX(-25px) rotate(360deg); opacity: 0; } }
+        .falling-petal { position: fixed; top: -10vh; z-index: 40; pointer-events: none; animation: fall linear infinite; }
+        .ticket-torn-top { transform: translateY(-18px) rotate(-3deg); opacity: 0.85; }
+        .ticket-torn-bottom { transform: translateY(25px) rotate(6deg); opacity: 0; }
+        @keyframes stampSlam { 0% { transform: translate(-50%, -50%) scale(3.5) rotate(-25deg); opacity: 0; } 70% { transform: translate(-50%, -50%) scale(0.9) rotate(-12deg); opacity: 1; } 100% { transform: translate(-50%, -50%) scale(1) rotate(-12deg); opacity: 1; } }
+        .stamp-active { display: flex !important; animation: stampSlam 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+        @keyframes pageFlip { 0% { transform: rotateX(0deg); opacity: 1; } 50% { transform: rotateX(-90deg); opacity: 0.3; } 100% { transform: rotateX(0deg); opacity: 1; } }
+        .calendar-flip { animation: pageFlip 0.7s ease-in-out; }
+        @keyframes birthdayGlow { 0%, 100% { box-shadow: 0 0 25px #ec4899, 0 0 50px #fbbf24; transform: scale(1); } 50% { box-shadow: 0 0 45px #ec4899, 0 0 80px #fbbf24; transform: scale(1.06); } }
+        .calendar-final-glow { animation: birthdayGlow 1.2s infinite ease-in-out; }
+        @keyframes spinVinyl { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .vinyl-record { position: relative; border-radius: 9999px; background: radial-gradient(circle, #111 0%, #111 35%, #222 36%, #000 70%, #111 100%); box-shadow: 0 0 20px rgba(29, 185, 84, 0.4); border: 3px solid #1DB954; }
+        .vinyl-grooves { position: absolute; inset: 4px; border-radius: 9999px; border: 1px dashed rgba(255, 255, 255, 0.15); pointer-events: none; }
+        .vinyl-spin { animation: spinVinyl 3s linear infinite; }
+        .vinyl-paused { animation-play-state: paused; }
+        @keyframes roadLinesMove { 0% { transform: translateX(0); } 100% { transform: translateX(-120px); } }
+        .road-lines { animation: roadLinesMove 0.35s linear infinite; }
+        .road-lines-fast { animation: roadLinesMove 0.1s linear infinite !important; }
+        @keyframes carCruise { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-3px); } }
+        .mercedes-cruise { animation: carCruise 0.6s ease-in-out infinite; }
+        .mercedes-cruise-fast { animation: carCruise 0.15s ease-in-out infinite !important; }
+        .exhaust-flame-active { opacity: 1 !important; transform: scaleX(2) scaleY(1.3) !important; background-image: linear-gradient(to left, transparent, #f97316, #ef4444) !important; box-shadow: 0 0 30px #ef4444, 0 0 60px #f97316 !important; left: -55px !important; width: 80px !important; }
+        @keyframes signPass { 0% { right: -200px; transform: scale(0.7); opacity: 0; } 20% { opacity: 1; } 80% { opacity: 1; } 100% { right: 110%; transform: scale(1.1); opacity: 0; } }
+        .highway-sign-anim { animation: signPass 5.5s linear forwards; }
+        @keyframes shakeGift { 0% { transform: rotate(0deg) scale(1); } 25% { transform: rotate(-12deg) scale(1.15); } 50% { transform: rotate(12deg) scale(1.15); } 75% { transform: rotate(-12deg) scale(1.15); } 100% { transform: rotate(0deg) scale(1); } }
+        .gift-shake { animation: shakeGift 0.3s cubic-bezier(.36,.07,.19,.97) both; }
+        @keyframes explodeGift { 0% { transform: scale(1); opacity: 1; } 40% { transform: scale(1.3); opacity: 1; filter: brightness(1.5); } 100% { transform: scale(2.5) translateY(-50px); opacity: 0; display: none; filter: brightness(2); } }
+        .gift-explode { animation: explodeGift 0.7s forwards; pointer-events: none; }
+        .typewriter-cursor::after { content: "▋"; color: #f472b6; animation: blinkCursor 0.8s infinite; margin-right: 4px; }
+        @keyframes blinkCursor { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .constellation-line { stroke-dasharray: 1000; stroke-dashoffset: 1000; transition: stroke-dashoffset 2.8s ease-in-out; }
+        .constellation-active .constellation-line { stroke-dashoffset: 0; }
+        .constellation-text { opacity: 0; transition: opacity 1.5s ease-in-out 1.8s; }
+        .constellation-active .constellation-text { opacity: 1; }
+        @keyframes flyToSky { 0% { transform: translateY(0) scale(1); opacity: 1; } 40% { transform: translateY(-120px) scale(1.1); opacity: 1; } 100% { transform: translateY(-550px) translateX(120px) scale(0.2); opacity: 0; } }
+        .shoot-wish-anim { animation: flyToSky 2.2s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+        .wire-selected { transform: scale(1.15); box-shadow: 0 0 20px currentColor; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #090a10; }
+        ::-webkit-scrollbar-thumb { background: #ec4899; border-radius: 4px; }
+    </style>
+</head>
+<body class="min-h-screen relative pb-24 selection:bg-pink-500 selection:text-white">
+
+    <!-- Audio Files -->
+    <audio id="stamp-audio" src="https://www.myinstants.com/media/sounds/heavy-slam.mp3" preload="auto"></audio>
+    <audio id="wa-audio" src="https://www.myinstants.com/media/sounds/whatsapp-notification.mp3" preload="auto"></audio>
+    <audio id="bg-audio" loop></audio>
+
+    <div id="cinema-overlay" class="fixed inset-0 bg-black/95 backdrop-blur-xl z-[90] hidden opacity-0 transition-opacity duration-700"></div>
+    <div id="petals-container"></div>
+
+    <div id="mini-player" class="fixed bottom-0 left-0 right-0 bg-gray-900/90 border-t border-pink-500/30 p-3 px-6 flex items-center justify-between z-50 hidden backdrop-blur-lg">
+        <div class="flex items-center gap-3">
+            <div id="player-status-dot" class="w-3 h-3 rounded-full bg-green-500 animate-ping"></div>
+            <span id="now-playing-text" class="text-sm text-green-400 font-semibold">Playing now...</span>
+        </div>
+        <button onclick="togglePlay()" id="play-pause-btn" class="font-english bg-green-500 text-black font-bold px-4 py-1 rounded-full text-sm hover:bg-green-400 transition">
+            Pause ⏸
+        </button>
+    </div>
+
+    <!-- FULLSCREEN START SCREEN -->
+    <section id="stage-start" class="fixed inset-0 bg-black z-[200] flex flex-col items-center justify-center transition-opacity duration-1000">
+        <button onclick="startJourney()" class="bg-transparent border-2 border-pink-500 text-pink-400 font-english font-bold text-xl px-8 py-4 rounded-full hover:bg-pink-500 hover:text-white transition duration-300 shadow-[0_0_20px_rgba(236,72,153,0.5)] animate-pulse">
+            Click Here To Start The Journey ✨
+        </button>
+        <p class="text-gray-500 mt-4 font-english text-sm">For the best experience, use aLaptop</p>
+    </section>
+
+    <!-- HACKER TERMINAL -->
+    <section id="stage-hacker" class="fixed inset-0 bg-black z-[100] flex items-center justify-center font-hacker text-green-500 overflow-hidden transition-opacity duration-1000 hidden" dir="ltr">
+        <div class="w-full max-w-3xl p-6 md:p-12">
+            <div id="hacker-text" class="text-sm md:text-xl lg:text-2xl leading-relaxed whitespace-pre-wrap drop-shadow-[0_0_8px_rgba(34,197,94,0.8)]"></div>
+            <div id="hacker-cursor" class="inline-block w-3 h-5 md:h-6 bg-green-500 animate-pulse ml-1 align-middle shadow-[0_0_10px_rgba(34,197,94,1)]"></div>
+        </div>
+    </section>
+
+    <!-- STAGE 0: REALISTIC IPHONE XR -->
+    <section id="stage-iphone" class="min-h-screen flex items-center justify-center relative bg-[#090a10] z-50 hidden">
+        <div id="iphone-hardware" class="iphone-hardware" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.4" data-tilt-perspective="1000">
+            <div class="hw-btn mute-switch"></div>
+            <div class="hw-btn vol-up"></div>
+            <div class="hw-btn vol-down"></div>
+            <div class="hw-btn power-btn"></div>
+
+            <div id="iphone-device" class="iphone-xr">
+                <img src="images/wallpaper.jpg" id="user-wallpaper" class="absolute inset-0 w-full h-full object-cover z-0" onerror="this.src='https://images.unsplash.com/photo-1549495899-73e449a3de8a?q=80&w=600&auto=format&fit=crop'">
+                <div class="iphone-notch"></div>
+                <div class="absolute top-2 w-full px-6 flex justify-between items-center z-20 font-english text-white font-semibold text-[11px] drop-shadow-md">
+                    <span id="iphone-time">00:00</span>
+                    <div class="flex items-center gap-1.5">
+                        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="white"><path d="M12 21C16.97 21 21 16.97 21 12C21 7.03 16.97 3 12 3C7.03 3 3 7.03 3 12C3 16.97 7.03 21 12 21ZM12 4.5C16.14 4.5 19.5 7.86 19.5 12C19.5 16.14 16.14 19.5 12 19.5C7.86 19.5 4.5 16.14 4.5 12C4.5 7.86 7.86 4.5 12 4.5ZM11.25 7.5V12.75L15.75 15.33L16.5 14.1L12.75 11.87V7.5H11.25Z" opacity="0"/></svg>
+                        <span>5G</span>
+                        <span class="w-5 h-2.5 border border-white rounded-[3px] relative flex items-center p-[1px]">
+                            <span class="bg-white h-full w-[80%] rounded-[1px]"></span>
+                            <span class="absolute -right-1 w-0.5 h-1 bg-white rounded-r-sm"></span>
+                        </span>
+                    </div>
+                </div>
+                <div id="whatsapp-notif" onclick="openSpotify()" class="absolute top-10 left-1/2 -translate-x-1/2 w-[92%] bg-gray-100/95 backdrop-blur-xl rounded-2xl p-3 shadow-[0_10px_30px_rgba(0,0,0,0.5)] z-40 hidden cursor-pointer transform transition-transform duration-300 hover:scale-105" dir="ltr">
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-transparent flex flex-shrink-0 items-center justify-center shadow-sm"><img src="https://img.icons8.com/color/96/whatsapp--v1.png" class="w-10 h-10 object-cover"></div>
+                        <div class="text-left flex-1 font-english">
+                            <div class="flex justify-between items-center mb-0.5"><span class="font-bold text-sm text-gray-900">Zaid ❤️</span><span class="text-[10px] text-gray-500">now</span></div>
+                            <p class="text-[13px] text-gray-700 leading-snug font-medium">Je t'aime 🌹 klicki hna bach tbday...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative z-10 p-6 pt-16 grid grid-cols-4 gap-y-5 gap-x-4 place-items-center" dir="ltr">
+                    <div class="flex flex-col items-center"><div class="ios-app"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Foto_%28iOS%29.png"></div><span class="app-text">Photos</span></div>
+                    <div class="flex flex-col items-center"><div class="ios-app"><img src="https://cdn.iconscout.com/icon/free/png-512/free-apple-camera-icon-svg-download-png-493147.png?f=webp&w=256"></div><span class="app-text">Camera</span></div>
+                    <div class="flex flex-col items-center"><div class="ios-app"><img src="https://img.icons8.com/fluency/96/partly-cloudy-day.png"></div><span class="app-text">Weather</span></div>
+                    <div class="flex flex-col items-center"><div class="ios-app"><img src="https://img.icons8.com/color/96/clock--v1.png"></div><span class="app-text">Clock</span></div>
+                    <div class="flex flex-col items-center"><div class="ios-app"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_Notes_icon.svg"></div><span class="app-text">Notes</span></div>
+                    <div class="flex flex-col items-center"><div class="ios-app"><img src="https://cdn.iconscout.com/icon/free/png-512/free-apple-settings-icon-svg-download-png-493162.png?f=webp&w=256"></div><span class="app-text">Settings</span></div>
+                    <div class="flex flex-col items-center"><div class="ios-app"><img src="https://img.icons8.com/fluency/96/instagram-new.png"></div><span class="app-text">Instagram</span></div>
+                    <div class="flex flex-col items-center"><div class="ios-app" style="background-color: #FFFC00;"><img src="https://upload.wikimedia.org/wikipedia/en/c/c4/Snapchat_logo.svg"></div><span class="app-text">Snapchat</span></div>
+                    <div class="flex flex-col items-center"><div class="ios-app"><img src="https://img.icons8.com/color/96/tiktok--v1.png"></div><span class="app-text">TikTok</span></div>
+                    <div class="flex flex-col items-center"><div class="ios-app"><img src="https://img.icons8.com/color/96/youtube-play.png"></div><span class="app-text">YouTube</span></div>
+                    <div class="flex flex-col items-center"><div class="ios-app"><img src="https://img.icons8.com/color/96/google-maps-new.png"></div><span class="app-text">Maps</span></div>
+                    <div class="flex flex-col items-center"><div class="ios-app"><img src="https://img.icons8.com/color/96/calculator--v1.png"></div><span class="app-text">Calculator</span></div>
+                </div>
+                <div class="iphone-dock" dir="ltr">
+                    <div class="ios-app"><img src="https://img.icons8.com/fluency/96/phone.png"></div>
+                    <div class="ios-app"><img src="https://img.icons8.com/color/96/safari--v1.png"></div>
+                    <div class="ios-app" style="background-color: #34C759;"><svg width="34" height="34" viewBox="0 0 24 24" fill="white" style="transform: translateY(-1px);"><path d="M12 2C6.477 2 2 6.03 2 11c0 2.87 1.5 5.42 3.84 7.13-.3.97-1.12 2.22-1.14 2.25-.13.2-.07.47.13.6.1.06.22.09.34.09.11 0 .23-.03.32-.09 1.15-.65 2.26-1.58 3.1-2.34 1.1.3 2.25.46 3.41.46 5.523 0 10-4.03 10-9S17.523 2 12 2z"/></svg></div>
+                    <div class="ios-app"><img src="https://img.icons8.com/color/96/spotify--v1.png"></div>
+                </div>
+                <div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-[110px] h-1.5 bg-white/90 rounded-full z-30"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STAGE 1: SPOTIFY -->
+    <section id="stage-spotify" class="max-w-3xl mx-auto p-6 min-h-screen flex flex-col justify-between hidden">
+        <div data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
+            <div class="flex items-center justify-between bg-gradient-to-l from-green-900/60 via-gray-900 to-gray-900 p-6 rounded-3xl border border-green-500/30 shadow-[0_0_30px_rgba(29,185,84,0.15)] mb-8">
+                <div class="flex items-center gap-5">
+                    <div class="relative">
+                        <div id="vinyl-disc" class="vinyl-record w-20 h-20 md:w-24 md:h-24 flex items-center justify-center overflow-hidden">
+                            <div class="vinyl-grooves"></div>
+                            <img id="profile-img" src="images/profile.jpg" onerror="this.src='https://via.placeholder.com/100/1DB954/FFFFFF?text=Rehab'" alt="Rehab" class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover border-2 border-amber-300 z-10 relative">
+                        </div>
+                        <span class="absolute -bottom-1 -right-1 bg-[#1DB954] text-black text-xs font-bold px-2 py-0.5 rounded-full z-20">VIP</span>
+                    </div>
+                    <div>
+                        <span class="font-english text-xs uppercase tracking-widest text-[#1DB954] font-bold">Birthday Edition • Top 5 Tracks</span>
+                        <h1 class="font-english text-3xl md:text-4xl font-extrabold mt-1">Rehab's Playlist ✨</h1>
+                        <p class="text-gray-300 text-sm mt-1">اختاري الأغنية لي بغيتي ترافقك فهاد الـ <span class="font-english text-green-400 font-semibold">Secret Journey</span> 🎧</p>
+                    </div>
+                </div>
+                <div class="text-[#1DB954] text-4xl hidden sm:block">♪</div>
+            </div>
+
+            <div class="flex items-center justify-between mb-4 px-2">
+                <h2 class="text-base md:text-lg font-bold text-gray-300">كليكي على وحدة من هاد الـ <span class="font-english text-green-400">5 Songs</span> باش نكملو:</h2>
+                <span class="font-english text-xs text-gray-500">5 TRACKS</span>
+            </div>
+            <div id="songs-container" class="space-y-3"></div>
+        </div>
+        <div id="spotify-next-container" class="mt-8 text-center hidden">
+            <button onclick="goToStage('stage-escape')" class="bg-[#1DB954] hover:bg-green-400 text-black font-extrabold text-lg px-10 py-4 rounded-full shadow-[0_0_25px_rgba(29,185,84,0.5)] transition transform hover:scale-105"> Let's Go To The Next Level ➔</button>
+        </div>
+    </section>
+
+    <!-- STAGE 2: ESCAPE ROOM -->
+    <section id="stage-escape" class="max-w-xl mx-auto p-6 min-h-screen flex flex-col justify-center hidden relative">
+        <div id="login-box" class="bg-gray-900/90 border border-purple-500/30 p-8 rounded-3xl shadow-[0_0_40px_rgba(168,85,247,0.15)] text-center backdrop-blur-md" data-tilt data-tilt-max="10" data-tilt-glare data-tilt-max-glare="0.2">
+            <div class="text-5xl mb-4">🔐</div>
+            <span class="font-english text-xs uppercase tracking-widest text-purple-400 font-bold">Security Check</span>
+            <h2 class="text-2xl font-bold mt-1 mb-2 text-white"> <span class="font-english text-purple-400">Rehab Only</span></h2>
+            <p class="text-gray-400 text-sm mb-6">دخلي الـ <span class="font-english text-gray-200">Login & Password</span> باش يتحل ليك القفل!</p>
+            <div class="space-y-4 text-right">
+                <div><label class="text-xs text-gray-400 mr-2 font-english">Username (Login) :</label><input id="login-input" type="text" placeholder="كتبي سميتك هنا..." class="w-full bg-gray-800/80 border border-gray-700 rounded-xl p-3.5 text-white focus:outline-none focus:border-purple-500 transition"></div>
+                <div><label class="text-xs text-gray-400 mr-2 font-english">Secret Password (Mot de passe) :</label><input id="password-input" type="password" placeholder="الكلمة السرية..." class="w-full bg-gray-800/80 border border-gray-700 rounded-xl p-3.5 text-white focus:outline-none focus:border-purple-500 transition"></div>
+            </div>
+            <div class="mt-3 text-right">
+                <button onclick="toggleHint()" class="text-xs text-amber-400 hover:text-amber-300 font-bold transition"> ?Forgot Password💡</button>
+                <p id="password-hint" class="hidden mt-2 text-base font-bold text-pink-300 font-romantic bg-gray-800 p-2.5 rounded-xl border border-pink-500/30 text-center tracking-wide">(mot de pass 3ndo 3ala9a blwhatsapp alkbida dyali ❤️)</p>
+            </div>
+            <p id="login-error" class="text-red-400 text-sm mt-4 hidden font-semibold">❌ Oops! المعلومات غالطين، ركزي مزيان أ رحاب 😂</p>
+            <button onclick="checkLogin()" class="mt-6 w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold py-3.5 rounded-xl shadow-lg transition transform hover:scale-[1.02]">Unlock The Gate 🔓</button>
+        </div>
+
+        <div id="amongus-box" class="bg-gray-900/95 border-2 border-red-500/40 p-6 md:p-8 rounded-3xl shadow-[0_0_45px_rgba(239,68,68,0.2)] text-center hidden backdrop-blur-md" data-tilt data-tilt-max="10">
+            <div class="flex items-center justify-between mb-3"><span class="font-english bg-red-500/20 border border-red-500/40 text-red-400 text-xs font-extrabold px-3 py-1 rounded-full">🛸 AMONG US TASK</span><span id="wire-progress" class="font-english text-xs text-amber-300 font-bold">0 / 4 WIRES</span></div>
+            <h3 class="text-2xl font-extrabold text-white mb-1">Fix Wiring : لاقي الخيوط بالألوان ⚡</h3>
+            <p class="text-gray-400 text-xs md:text-sm mb-6">كليكي على اللون فالجنب الليسر ومن بعد كليكي على خوه فالجنب الليمن باش يشعل الضو!</p>
+            <div id="wiring-board" class="relative bg-[#11131f] border-4 border-gray-700 rounded-2xl p-4 h-72 flex justify-between items-center select-none overflow-hidden shadow-inner" dir="ltr">
+                <svg id="wires-svg" class="absolute inset-0 w-full h-full pointer-events-none z-10"></svg>
+                <div class="flex flex-col justify-around h-full z-20 gap-3">
+                    <button onclick="selectLeftWire('red', this)" data-color="red" class="left-wire w-14 h-10 rounded-r-xl bg-red-600 border-2 border-red-300 flex items-center justify-center font-english text-xs font-extrabold text-white transition">⚡ RED</button>
+                    <button onclick="selectLeftWire('blue', this)" data-color="blue" class="left-wire w-14 h-10 rounded-r-xl bg-blue-600 border-2 border-blue-300 flex items-center justify-center font-english text-xs font-extrabold text-white transition">⚡ BLU</button>
+                    <button onclick="selectLeftWire('yellow', this)" data-color="yellow" class="left-wire w-14 h-10 rounded-r-xl bg-amber-400 border-2 border-amber-200 flex items-center justify-center font-english text-xs font-extrabold text-black transition">⚡ YLW</button>
+                    <button onclick="selectLeftWire('pink', this)" data-color="pink" class="left-wire w-14 h-10 rounded-r-xl bg-pink-500 border-2 border-pink-200 flex items-center justify-center font-english text-xs font-extrabold text-white transition">⚡ PNK</button>
+                </div>
+                <div class="flex flex-col justify-around h-full z-20 gap-3">
+                    <button onclick="selectRightWire('yellow', this)" data-color="yellow" class="right-wire w-14 h-10 rounded-l-xl bg-amber-400 border-2 border-amber-200 flex items-center justify-center font-english text-xs font-extrabold text-black transition">YLW ⚡</button>
+                    <button onclick="selectRightWire('red', this)" data-color="red" class="right-wire w-14 h-10 rounded-l-xl bg-red-600 border-2 border-red-300 flex items-center justify-center font-english text-xs font-extrabold text-white transition">RED ⚡</button>
+                    <button onclick="selectRightWire('pink', this)" data-color="pink" class="right-wire w-14 h-10 rounded-l-xl bg-pink-500 border-2 border-pink-200 flex items-center justify-center font-english text-xs font-extrabold text-white transition">PNK ⚡</button>
+                    <button onclick="selectRightWire('blue', this)" data-color="blue" class="right-wire w-14 h-10 rounded-l-xl bg-blue-600 border-2 border-blue-300 flex items-center justify-center font-english text-xs font-extrabold text-white transition">BLU ⚡</button>
+                </div>
+            </div>
+            <p id="amongus-status" class="text-sm mt-4 font-bold text-gray-300">🕵️‍♀️ خاصك تكملي الـ Task باش تثبتي بلي ماشي Impostor 😂</p>
+        </div>
+
+        <div id="questions-box" class="bg-gray-900/90 border border-pink-500/30 p-8 rounded-3xl shadow-2xl hidden" data-tilt>
+            <div class="flex justify-between items-center mb-6"><span class="bg-pink-500/20 text-pink-400 text-xs font-bold px-3 py-1 rounded-full" id="question-counter">Question 1 / 3</span><span class="text-2xl">🧩</span></div>
+            <h3 id="question-text" class="text-xl font-bold mb-6 leading-relaxed"></h3>
+            <div id="options-container" class="space-y-3"></div>
+            <p id="quiz-feedback" class="text-sm mt-4 text-center hidden font-bold"></p>
+        </div>
+
+        <!-- BOOYAH MATCH RESULT -->
+        <div id="booyah-box" class="hidden w-full max-w-md mx-auto bg-gray-900 border-2 border-yellow-500 rounded-3xl shadow-[0_0_50px_rgba(234,179,8,0.4)] overflow-hidden text-center relative" data-tilt>
+            <!-- Background Image / Header -->
+            <div class="relative h-56 bg-black">
+                <!-- Hna dir smit tswira dyalkom f FF -->
+                <img src="images/freefire.jpg" onerror="this.src='https://via.placeholder.com/600x300/1a1a2e/eab308?text=Free+Fire+Duo+📸'" class="w-full h-full object-cover opacity-60">
+                <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent"></div>
+                <h2 class="absolute bottom-2 left-0 w-full text-6xl font-black text-transparent bg-clip-text bg-gradient-to-b from-yellow-300 to-orange-500 drop-shadow-[0_5px_5px_rgba(0,0,0,0.9)] tracking-widest italic" style="font-family: Impact, sans-serif;">BOOYAH!</h2>
+            </div>
+            <!-- Stats -->
+            <div class="p-6 relative z-10">
+                <span class="inline-block bg-yellow-500/20 text-yellow-400 border border-yellow-500/50 px-4 py-1.5 rounded-full text-xs font-bold mb-5 shadow-lg">🏆 LEGENDARY DUO 🏆</span>
+                <div class="grid grid-cols-2 gap-3 text-left font-english mb-6">
+                    <div class="bg-gray-800/90 p-3 rounded-xl border border-gray-700 shadow-inner">
+                        <span class="text-[10px] text-gray-400 block uppercase">Kills 🔫</span>
+                        <span class="text-lg font-extrabold text-white">0 <span class="text-[10px] text-pink-400 font-bold block">(Hits to Heart: 100% ❤️)</span></span>
+                    </div>
+                    <div class="bg-gray-800/90 p-3 rounded-xl border border-gray-700 shadow-inner">
+                        <span class="text-[10px] text-gray-400 block uppercase">Survival Time ⏳</span>
+                        <span class="text-xl font-extrabold text-white mt-1 block">Forever ♾️</span>
+                    </div>
+                    <div class="bg-gray-800/90 p-3 rounded-xl border border-gray-700 col-span-2 shadow-inner text-center">
+                        <span class="text-[10px] text-gray-400 block uppercase">Revives 🤝</span>
+                        <span class="text-sm font-bold text-white block mt-1">Ankun m3ak flkhayba 9bl zwina❤️</span>
+                    </div>
+                </div>
+                <button onclick="showTicketFromBooyah()" class="w-full bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 text-black font-extrabold py-3.5 rounded-xl shadow-[0_0_20px_rgba(234,179,8,0.5)] transition transform hover:scale-[1.02] text-lg uppercase tracking-wide border border-yellow-300">Claim Reward ➔</button>
+            </div>
+        </div>
+
+        <div id="ticket-box" class="hidden text-center" data-tilt>
+            <span class="font-english text-xs uppercase tracking-widest text-amber-400 font-bold">✨ Boarding Pass Unlocked ✨</span>
+            <h3 class="text-2xl font-extrabold mt-1 mb-2 text-white">تذكرة السفر الخاصة بـ Rehab 🎟️</h3>
+            <p class="text-gray-400 text-sm mb-6">كليكي على التذكرة باش تقطعيها وتبدا الرحلة من كازا لأحفير!</p>
+
+            <div onclick="tearTicket()" class="cursor-pointer max-w-md mx-auto select-none group">
+                <div id="ticket-top" class="bg-gradient-to-br from-amber-200 via-yellow-100 to-amber-300 text-gray-900 p-6 rounded-t-3xl border-b-4 border-dashed border-gray-800 shadow-[0_0_40px_rgba(251,191,36,0.3)] transition-all duration-700 relative">
+                    <div class="flex justify-between items-center border-b border-amber-500/40 pb-3 mb-4 font-english"><span class="font-extrabold text-xs tracking-widest bg-gray-900 text-amber-300 px-3 py-1 rounded-full">VIP ROYAL AIRLINES</span><span class="text-xs font-bold text-gray-700">CLASS: QUEEN 👑</span></div>
+                    <div class="flex justify-between items-center my-4 font-english">
+                        <div class="text-center"><p class="text-3xl font-extrabold text-gray-900">CMN</p><p class="text-xs font-bold text-gray-600">Casablanca</p></div>
+                        <div class="flex-1 px-4 flex flex-col items-center"><span class="text-2xl group-hover:translate-x-2 transition transform">✈️</span><div class="w-full h-0.5 bg-gray-800/40 my-1"></div><span class="text-[10px] font-bold text-pink-700 uppercase">Direct To Heart</span></div>
+                        <div class="text-center"><p class="text-3xl font-extrabold text-pink-600">AHF</p><p class="text-xs font-bold text-gray-600">Ahfir ❤️</p></div>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2 text-right bg-white/60 p-3 rounded-xl text-xs font-english mt-4">
+                        <div><span class="text-gray-500 block text-[10px]">PASSENGER</span><span class="font-extrabold text-gray-900">REHAB ✨</span></div>
+                        <div><span class="text-gray-500 block text-[10px]">DATE</span><span class="font-extrabold text-gray-900">08 NOV 🎂</span></div>
+                        <div><span class="text-gray-500 block text-[10px]">SEAT</span><span class="font-extrabold text-pink-600">9ALBI #1</span></div>
+                    </div>
+                    <div id="royal-stamp" class="hidden absolute top-1/2 left-1/2 z-30 pointer-events-none flex-col items-center justify-center border-4 border-double border-red-600 text-red-600 bg-red-50/95 px-5 py-2 rounded-2xl shadow-[0_0_25px_rgba(220,38,38,0.6)] font-english">
+                        <span class="text-[10px] font-extrabold tracking-widest uppercase">★ VIP BOARDING APPROVED ★</span><span class="text-lg font-extrabold tracking-wider">QUEEN REHAB 👑</span><span class="text-[10px] font-bold">08 NOV • CASA ➔ AHFIR ❤️</span>
+                    </div>
+                </div>
+                <div id="ticket-bottom" class="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-amber-300 p-4 rounded-b-3xl border border-t-0 border-amber-400/40 shadow-xl transition-all duration-700">
+                    <p class="font-bold text-sm animate-pulse">✂️ كليكي هنا باش تقطعي التذكرة وتبدا السفر ➔</p>
+                    <p class="font-english text-[10px] tracking-[0.3em] text-gray-400 mt-1">|||| |||| || ||||| |||| ||| ||||</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STAGE CUTSCENE: MERCEDES-AMG (FULL SCREEN PARALLAX) -->
+    <section id="stage-cutscene" class="w-full mx-auto min-h-screen flex flex-col items-center justify-center hidden select-none overflow-hidden relative">
+        
+        <div id="cutscene-calendar" class="text-center transition-all duration-700 font-english z-20 absolute" dir="ltr" data-tilt>
+            <span class="text-xs uppercase tracking-widest text-amber-400 font-bold block mb-4">⏳ Counting Down To The Queen's Birthday...</span>
+            <div id="cal-card" class="w-72 sm:w-80 mx-auto bg-gray-900 border-2 border-pink-500/40 rounded-3xl overflow-hidden shadow-[0_0_40px_rgba(236,72,153,0.25)]">
+                <div class="bg-gradient-to-r from-pink-600 via-purple-600 to-amber-500 py-4 px-6 flex justify-between items-center"><span class="w-3.5 h-3.5 rounded-full bg-gray-900/70"></span><span id="cal-month-year" class="font-extrabold text-base sm:text-lg tracking-widest text-white block">NOVEMBER 2026</span><span class="w-3.5 h-3.5 rounded-full bg-gray-900/70"></span></div>
+                <div id="cal-body" class="py-10 px-6 bg-gradient-to-b from-gray-900 to-[#12091c]">
+                    <span id="cal-weekday" class="text-xs uppercase tracking-[0.25em] text-pink-400 font-bold block mb-2">WEDNESDAY</span>
+                    <span id="cal-day-num" class="text-7xl sm:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-white to-pink-300 block leading-none">04</span>
+                    <span id="cal-subtext" class="text-xs sm:text-sm text-gray-400 mt-4 block font-semibold tracking-wide">Get Ready... ✨</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="cutscene-mercedes" class="hidden w-[100vw] h-[100vh] transition-all duration-700 relative bg-gradient-to-b from-[#04050c] via-[#0c0a20] to-[#1a0b2e]">
+            <div class="absolute inset-0 bg-parallax-stars z-0"></div>
+            <div class="absolute inset-x-0 bottom-28 h-[40vh] bg-parallax-mountains z-10"></div>
+            
+            <div class="absolute top-10 left-1/2 -translate-x-1/2 text-center mb-4 font-english z-20 w-full" dir="ltr">
+                <span class="text-sm md:text-base uppercase tracking-widest text-pink-400 font-bold drop-shadow-md">🌙 Midnight VIP Drive • Casablanca To Ahfir 🎶</span>
+                <h3 class="text-3xl sm:text-5xl font-extrabold text-white mt-2 drop-shadow-lg">CASA ➔ Ahfir 🌹</h3>
+            </div>
+            <div id="acceleration-container" class="absolute bottom-60 md:bottom-80 left-1/2 -translate-x-1/2 z-40">
+                <button onclick="accelerateCar()" id="accel-btn" class="bg-gradient-to-r from-red-600 to-orange-500 text-white font-english font-extrabold px-8 py-3 rounded-full shadow-[0_0_30px_rgba(239,68,68,0.8)] hover:scale-110 transition transform animate-bounce border-2 border-white text-lg">Acceleration 🔥</button>
+            </div>
+            
+            <div id="highway-sign" class="absolute top-32 right-[-300px] z-30 bg-emerald-800/95 border-2 border-white px-6 py-4 rounded-xl shadow-[0_0_30px_rgba(16,185,129,0.7)] text-left font-english" dir="ltr"><span class="block text-xs text-amber-300 font-bold tracking-wider">VIP HIGHWAY ❤️</span><span id="sign-city-text" class="block text-xl sm:text-3xl font-extrabold text-white">📍 CASABLANCA ➔ AHFIR</span><span id="sign-km-text" class="block text-xs text-pink-300 font-bold mt-1">REHAB'S BIRTHDAY TRIP 👑</span></div>
+            
+            <div class="absolute bottom-28 inset-x-0 h-16 bg-gradient-to-t from-pink-500/30 to-transparent blur-xl z-20"></div>
+            
+            <div class="absolute bottom-0 inset-x-0 h-32 md:h-40 bg-[#0b0c14] border-t-4 border-pink-500/40 overflow-hidden flex items-center z-20">
+                <div id="the-road-lines" class="road-lines flex gap-16 w-[200%]"><div class="w-24 h-2 bg-amber-400/90 rounded-full shrink-0 shadow-[0_0_10px_#fbbf24]"></div><div class="w-24 h-2 bg-amber-400/90 rounded-full shrink-0 shadow-[0_0_10px_#fbbf24]"></div><div class="w-24 h-2 bg-amber-400/90 rounded-full shrink-0 shadow-[0_0_10px_#fbbf24]"></div><div class="w-24 h-2 bg-amber-400/90 rounded-full shrink-0 shadow-[0_0_10px_#fbbf24]"></div><div class="w-24 h-2 bg-amber-400/90 rounded-full shrink-0 shadow-[0_0_10px_#fbbf24]"></div><div class="w-24 h-2 bg-amber-400/90 rounded-full shrink-0 shadow-[0_0_10px_#fbbf24]"></div></div>
+            </div>
+            
+            <div id="the-mercedes" class="mercedes-cruise absolute bottom-12 left-1/2 -translate-x-1/2 z-30 w-80 sm:w-[500px]" dir="ltr">
+                <div class="absolute right-[-110px] bottom-5 w-40 h-14 bg-gradient-to-r from-cyan-200/60 via-amber-100/25 to-transparent rounded-full blur-md transform rotate-2 pointer-events-none"></div>
+                <div id="exhaust-fire" class="absolute left-[-25px] bottom-7 w-12 h-6 bg-red-600/70 rounded-full blur-md pointer-events-none transition-all duration-300"></div>
+                <svg viewBox="0 0 500 160" class="w-full drop-shadow-[0_20px_30px_rgba(0,0,0,0.9)]"><defs><linearGradient id="mercBody" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#111827"/><stop offset="50%" stop-color="#1f2937"/><stop offset="100%" stop-color="#090d16"/></linearGradient><linearGradient id="mercWindow" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#374151"/><stop offset="100%" stop-color="#111827"/></linearGradient></defs><path d="M 40 110 L 25 95 C 25 80, 45 70, 85 68 L 165 35 C 215 25, 290 28, 345 62 L 445 72 C 468 76, 478 90, 475 110 L 455 120 L 45 120 Z" fill="url(#mercBody)" stroke="#fbbf24" stroke-width="1.5"/><path d="M 175 42 L 265 40 L 265 68 L 135 68 Z" fill="url(#mercWindow)" stroke="#9ca3af" stroke-width="1"/><path d="M 275 40 C 305 42, 325 55, 335 68 L 275 68 Z" fill="url(#mercWindow)" stroke="#9ca3af" stroke-width="1"/><circle cx="465" cy="92" r="5" fill="none" stroke="#fde047" stroke-width="1.5"/><text x="235" y="96" fill="#fbbf24" font-size="13" font-family="Poppins, sans-serif" font-weight="bold" letter-spacing="3">★ REHAB ★</text><path d="M 450 80 L 473 86 L 468 95 L 445 90 Z" fill="e0f2fe" stroke="#38bdf8" stroke-width="2"/><path d="M 27 80 L 48 82 L 45 92 L 25 90 Z" fill="#ef4444" stroke="#f87171" stroke-width="2"/><circle cx="115" cy="118" r="28" fill="#090a0f" stroke="#fbbf24" stroke-width="3"/><circle cx="115" cy="118" r="16" fill="none" stroke="#9ca3af" stroke-width="2" stroke-dasharray="8 6"/><circle cx="115" cy="118" r="6" fill="#ef4444"/><circle cx="385" cy="118" r="28" fill="#090a0f" stroke="#fbbf24" stroke-width="3"/><circle cx="385" cy="118" r="16" fill="none" stroke="#9ca3af" stroke-width="2" stroke-dasharray="8 6"/><circle cx="385" cy="118" r="6" fill="#ef4444"/></svg>
+            </div>
+            
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 w-full max-w-2xl px-4 z-40">
+                <div class="flex items-center justify-between text-sm md:text-base font-english text-gray-300 drop-shadow-md mb-2" dir="ltr"><span class="font-bold text-amber-400">📍 CASABLANCA</span><span id="km-counter-text" class="font-extrabold text-pink-400 text-lg">620 km</span><span class="font-bold text-pink-400">🏁 AHFIR ❤️</span></div>
+                <div class="h-3 md:h-4 bg-gray-800/80 rounded-full overflow-hidden border border-gray-600 shadow-inner" dir="ltr"><div id="merc-progress" class="h-full bg-gradient-to-r from-amber-400 via-pink-500 to-purple-500 w-0 transition-all duration-300 relative"><div class="absolute right-0 top-0 bottom-0 w-10 bg-white/40 blur-[2px] animate-pulse"></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STAGE 3: REHABFLIX (NETFLIX CLONE) -->
+    <section id="stage-map" class="w-full bg-[#141414] min-h-screen hidden pb-24 relative overflow-x-hidden">
+        
+        <!-- Netflix Navbar -->
+        <div class="absolute top-0 w-full px-6 md:px-12 py-6 z-50 bg-gradient-to-b from-black/90 to-transparent flex justify-between items-center" id="netflix-nav">
+            <span class="text-red-600 font-extrabold text-3xl md:text-4xl tracking-widest font-english drop-shadow-[0_0_10px_rgba(220,38,38,0.8)]">REHABFLIX</span>
+            <div class="flex items-center gap-4 md:gap-6">
+                <span class="text-white text-xl cursor-pointer">🔍</span>
+                <span class="text-white text-xl cursor-pointer">🔔</span>
+                <img src="images/profile.jpg" onerror="this.src='https://via.placeholder.com/60/e11d48/FFFFFF?text=R'" class="w-14 h-14 md:w-16 md:h-16 rounded-md border-2 border-transparent hover:border-white transition cursor-pointer shadow-lg object-cover">
+            </div>
+        </div>
+
+        <!-- Netflix Hero Trailer -->
+        <div class="relative w-full h-[75vh] flex items-end pb-16 px-6 md:px-12 bg-[#141414]">
+            <div class="absolute inset-0 z-0">
+                <img src="images/station1.jpg" onerror="this.src='https://images.unsplash.com/photo-1476820865390-c52aeebb9891?q=80&w=1920&auto=format&fit=crop'" class="w-full h-full object-cover opacity-60">
+                <div class="absolute inset-0 bg-gradient-to-r from-[#141414] via-[#141414]/60 to-transparent"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-transparent h-full"></div>
+            </div>
+            
+            <div class="relative z-10 max-w-3xl">
+                <div class="flex items-center gap-2 mb-4 font-english">
+                    <span class="text-gray-300 font-bold tracking-[0.2em] text-sm md:text-base">ORIGINAL SERIES</span>
+                </div>
+                <h2 class="text-4xl md:text-7xl font-extrabold text-white mb-4 drop-shadow-2xl">Rehab's Journey ❤️</h2>
+                <p class="text-white text-lg md:text-2xl mb-6 drop-shadow-md leading-relaxed font-semibold max-w-2xl">
+                    9issa dyal jouj qlouba tjam3ou raghma l masafa. Mn Casa l'Ahfir.❤️
+                </p>
+                <div class="flex gap-4 font-english">
+                    <button onclick="document.getElementById('netflix-rows').scrollIntoView({behavior: 'smooth'})" class="bg-white text-black px-6 md:px-8 py-2 md:py-3 rounded flex items-center gap-3 font-bold hover:bg-white/80 transition text-lg md:text-xl"><span class="text-2xl">▶</span> Play Memories</button>
+                    <button class="bg-gray-500/50 text-white px-6 md:px-8 py-2 md:py-3 rounded flex items-center gap-3 font-bold hover:bg-gray-500/70 transition backdrop-blur-md text-lg md:text-xl"><span class="text-2xl border-2 border-white rounded-full w-7 h-7 flex items-center justify-center text-sm">i</span> More Info</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="netflix-rows" class="relative z-20 px-6 md:px-12 -mt-6">
+            <h3 class="text-xl md:text-2xl font-bold text-gray-100 mb-4 font-english">Trending Episodes ➔ Ahfir ✨</h3>
+            <div class="flex gap-4 overflow-x-auto pb-12 pt-4 hide-scrollbar snap-x" id="timeline-container">
+                <!-- Cards will be injected here via JavaScript -->
+            </div>
+        </div>
+
+        <div class="text-center mt-8 relative z-20">
+            <button onclick="goToStage('stage-cake')" class="bg-red-600 hover:bg-red-700 text-white font-extrabold text-xl px-12 py-5 rounded shadow-[0_0_30px_rgba(220,38,38,0.5)] transition transform hover:scale-105 font-english tracking-wide">📍 NEXT EPISODE: Welcome To Ahfir 🎂 ➔</button>
+        </div>
+    </section>
+
+    <!-- STAGE 4: CAKE + FINAL SURPRISE -->
+    <section id="stage-cake" class="max-w-4xl mx-auto p-6 min-h-screen flex flex-col items-center justify-center hidden relative z-20">
+        
+        <div id="cake-section" class="text-center my-10 transition-all duration-1000 w-full max-w-lg mx-auto">
+            <span class="font-english text-xs uppercase tracking-widest text-pink-400 font-bold">Make A Wish ✨</span>
+            <h2 class="font-english-script text-5xl md:text-6xl text-pink-400 mt-2 mb-3">Happy Birthday Rehab!</h2>
+            <p id="candle-instruction" class="text-gray-300 mb-14 text-lg animate-bounce">كليكي على الشمعات بـ 3 باش تطفيهم وتمنّاي أمنية 🕯️✨</p>
+            <div class="relative inline-block mt-6">
+                <div class="flex justify-center gap-10 mb-[-10px] relative z-10">
+                    <div onclick="blowCandle(0)" class="cursor-pointer flex flex-col items-center group"><div id="flame-0" class="flame w-6 h-9 bg-gradient-to-t from-orange-500 via-yellow-300 to-white rounded-full shadow-[0_0_25px_#facc15] mb-1"></div><div class="w-4 h-16 bg-gradient-to-b from-pink-200 to-pink-400 rounded-t-sm border-b-4 border-pink-600"></div></div>
+                    <div onclick="blowCandle(1)" class="cursor-pointer flex flex-col items-center group"><div id="flame-1" class="flame w-6 h-9 bg-gradient-to-t from-orange-500 via-yellow-300 to-white rounded-full shadow-[0_0_25px_#facc15] mb-1"></div><div class="w-4 h-16 bg-gradient-to-b from-amber-200 to-amber-400 rounded-t-sm border-b-4 border-amber-600"></div></div>
+                    <div onclick="blowCandle(2)" class="cursor-pointer flex flex-col items-center group"><div id="flame-2" class="flame w-6 h-9 bg-gradient-to-t from-orange-500 via-yellow-300 to-white rounded-full shadow-[0_0_25px_#facc15] mb-1"></div><div class="w-4 h-16 bg-gradient-to-b from-purple-200 to-purple-400 rounded-t-sm border-b-4 border-purple-600"></div></div>
+                </div>
+                <div class="w-64 h-16 bg-gradient-to-r from-pink-400 via-pink-300 to-pink-400 rounded-t-2xl border-b-8 border-pink-500 shadow-inner mx-auto relative"><div class="font-english text-xs font-extrabold text-pink-950 pt-5 tracking-widest">✨ REHAB ✨</div></div>
+                <div class="w-72 h-20 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 rounded-t-xl border-b-8 border-purple-800 shadow-2xl mx-auto"></div><div class="w-80 h-4 bg-amber-200 rounded-full mx-auto shadow-[0_10px_30px_rgba(236,72,153,0.5)]"></div>
+            </div>
+            <div id="wish-box" class="hidden mt-10 bg-gray-900/90 border border-amber-400/40 p-6 rounded-3xl shadow-[0_0_40px_rgba(251,191,36,0.2)] backdrop-blur-md transition-all duration-700" data-tilt data-tilt-glare data-tilt-max-glare="0.2">
+                <div id="wish-form-content">
+                    <span class="text-3xl">🌠</span><h3 class="text-xl font-extrabold text-amber-300 mt-1 mb-2">صندوق الأمنيات ديال رحاب ✨</h3>
+                    <p class="text-xs md:text-sm text-gray-300 mb-4">كتبي هنا أي أمنية كتمنايها فهاد العام الجديد، وصيفطيها كـ نجمة للسما</p>
+                    <input id="wish-input" type="text" placeholder="كتبي الأمنية ديالك هنا..." class="w-full bg-gray-800/90 border border-pink-500/40 rounded-xl p-3.5 text-white text-center focus:outline-none focus:border-amber-400 mb-4">
+                    <button onclick="sendWishToStars()" class="w-full bg-gradient-to-r from-amber-400 via-pink-500 to-purple-600 text-white font-extrabold py-3.5 rounded-xl shadow-lg hover:scale-[1.02] transition transform">صيفطي الأمنية  🌠✨</button>
+                </div>
+                <div id="flying-wish-star" class="hidden py-6 text-center"><div id="star-fly-item" class="inline-block bg-gradient-to-r from-amber-300 to-pink-400 text-black font-extrabold px-6 py-3 rounded-full shadow-[0_0_35px_#fbbf24]">🌟 <span id="star-wish-preview">أمنية رحاب</span> ✨</div><p class="text-amber-300 font-bold text-sm mt-4 animate-pulse">✨ أمنيتك طارت للسما... ياربي تتحقق ليك! 🤲❤️</p></div>
+            </div>
+        </div>
+
+        <div id="special-letter" class="hidden w-full py-8 transition-all duration-1000 opacity-0 scale-95">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-2 bg-pink-500/10 border border-pink-500/30 px-5 py-1.5 rounded-full text-pink-300 text-sm mb-3"><span>🌹</span><span class="font-english font-semibold tracking-wider">FOR THE QUEEN OF AHFIR</span><span>🌹</span></div>
+                <h2 class="font-english-script text-5xl md:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-pink-300 via-amber-200 to-pink-400 drop-shadow-[0_2px_15px_rgba(236,72,153,0.4)]">Happy Birthday Rehab!</h2>
+                <p class="text-gray-300 mt-2 text-sm md:text-base">كل وردة هنا كتشهد على بلاصتك الكبيرة... 🌷✨</p>
+            </div>
+            
+            <div class="max-w-2xl mx-auto mb-14 bg-gradient-to-r from-pink-950/60 via-purple-950/60 to-pink-950/60 border border-pink-400/30 rounded-3xl p-6 text-center shadow-[0_0_35px_rgba(236,72,153,0.2)] backdrop-blur-md">
+                <p class="font-english text-xs md:text-sm uppercase tracking-widest text-amber-300 font-bold mb-1">⏳ Time Since The World Got Brighter ✨</p>
+                <div class="grid grid-cols-5 gap-2 md:gap-4 font-english mt-5">
+                    <div class="bg-gray-900/90 border border-pink-500/30 rounded-2xl p-3 shadow-inner"><span id="cnt-years" class="block text-2xl md:text-4xl font-extrabold text-pink-400">0</span><span class="text-[10px] md:text-xs text-gray-400 uppercase tracking-wider">Years</span></div>
+                    <div class="bg-gray-900/90 border border-pink-500/30 rounded-2xl p-3 shadow-inner"><span id="cnt-days" class="block text-2xl md:text-4xl font-extrabold text-amber-300">0</span><span class="text-[10px] md:text-xs text-gray-400 uppercase tracking-wider">Days</span></div>
+                    <div class="bg-gray-900/90 border border-pink-500/30 rounded-2xl p-3 shadow-inner"><span id="cnt-hours" class="block text-2xl md:text-4xl font-extrabold text-pink-400">0</span><span class="text-[10px] md:text-xs text-gray-400 uppercase tracking-wider">Hours</span></div>
+                    <div class="bg-gray-900/90 border border-pink-500/30 rounded-2xl p-3 shadow-inner"><span id="cnt-minutes" class="block text-2xl md:text-4xl font-extrabold text-amber-300">0</span><span class="text-[10px] md:text-xs text-gray-400 uppercase tracking-wider">Mins</span></div>
+                    <div class="bg-gray-900/90 border border-amber-400/50 rounded-2xl p-3 shadow-[0_0_15px_rgba(251,191,36,0.2)]"><span id="cnt-seconds" class="block text-2xl md:text-4xl font-extrabold text-green-400 animate-pulse">0</span><span class="text-[10px] md:text-xs text-amber-300 uppercase tracking-wider font-bold">Secs</span></div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 px-4 items-center">
+                <div class="float-card bg-white/95 p-3 pb-6 rounded-2xl shadow-[0_15px_35px_rgba(236,72,153,0.25)] relative" data-tilt data-tilt-max="20" data-tilt-scale="1.05">
+                    <div class="absolute -top-4 -right-4 text-3xl drop-shadow">🌹</div><img id="final-img-1" src="" onerror="this.src='https://via.placeholder.com/400x450/fce7f3/db2777?text=Rehab+1+🌹'" class="w-full h-64 object-cover rounded-xl mb-3"><p id="final-cap-1" class="font-english-script text-2xl text-gray-800 text-center font-bold"></p>
+                </div>
+                <div class="float-card bg-gradient-to-b from-amber-100 to-white p-3.5 pb-7 rounded-2xl shadow-[0_20px_50px_rgba(251,191,36,0.35)] relative border-2 border-amber-300 z-10" data-tilt data-tilt-max="20" data-tilt-scale="1.1" data-tilt-glare data-tilt-max-glare="0.3">
+                    <div class="absolute -top-5 left-1/2 -translate-x-1/2 bg-pink-600 text-white text-xs font-english font-bold px-3 py-1 rounded-full shadow">👑 Birthday Girl 👑</div><img id="final-img-2" src="" onerror="this.src='https://via.placeholder.com/400x450/fef3c7/d97706?text=Rehab+2+👑'" class="w-full h-72 object-cover rounded-xl mb-3"><p id="final-cap-2" class="font-english-script text-2xl text-pink-700 text-center font-bold"></p>
+                </div>
+                <div class="float-card bg-white/95 p-3 pb-6 rounded-2xl shadow-[0_15px_35px_rgba(236,72,153,0.25)] relative" data-tilt data-tilt-max="20" data-tilt-scale="1.05">
+                    <div class="absolute -top-4 -left-4 text-3xl drop-shadow">🌺</div><img id="final-img-3" src="" onerror="this.src='https://via.placeholder.com/400x450/f3e8ff/9333ea?text=Rehab+3+✨'" class="w-full h-64 object-cover rounded-xl mb-3"><p id="final-cap-3" class="font-english-script text-2xl text-gray-800 text-center font-bold"></p>
+                </div>
+            </div>
+
+            <div class="max-w-2xl mx-auto mb-16 bg-[#05060b] border border-amber-400/30 rounded-3xl p-6 text-center shadow-[0_0_45px_rgba(251,191,36,0.15)] relative overflow-hidden">
+                <span class="font-english text-xs uppercase tracking-widest text-amber-300 font-bold">✨ Written In The Stars ✨</span>
+                <h3 class="text-xl md:text-2xl font-bold text-white mt-1 mb-2">حتى النجوم فالسما كترسم سميتك أ RAHOUBA LHABOUBA 🌌</h3>
+                <div id="constellation-box" class="relative w-full h-56 md:h-64 bg-gradient-to-b from-[#070913] via-[#0f1026] to-[#1a0b2e] rounded-2xl border border-purple-500/20 flex items-center justify-center overflow-hidden mb-4 mt-4">
+                    <svg viewBox="0 0 400 200" class="w-full h-full">
+                        <circle cx="30" cy="40" r="1.5" fill="#fff" class="animate-ping"/><circle cx="350" cy="30" r="1.5" fill="#fff"/><circle cx="80" cy="170" r="1" fill="#fff"/><circle cx="320" cy="160" r="1.5" fill="#fff" class="animate-pulse"/><circle cx="200" cy="20" r="1" fill="#fff"/><circle cx="60" cy="90" r="1.5" fill="#fde047"/><circle cx="340" cy="100" r="1.5" fill="#fde047"/>
+                        <path class="constellation-line" d="M 200 165 L 120 95 L 145 50 L 200 80 L 255 50 L 280 95 Z" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <circle cx="200" cy="165" r="4" fill="#f472b6" /><circle cx="120" cy="95" r="4" fill="#fbbf24" /><circle cx="145" cy="50" r="4" fill="#f472b6" /><circle cx="200" cy="80" r="4.5" fill="#fbbf24" /><circle cx="255" cy="50" r="4" fill="#f472b6" /><circle cx="280" cy="95" r="4" fill="#fbbf24" />
+                        <text x="200" y="118" text-anchor="middle" fill="#fde047" class="constellation-text font-english font-extrabold text-2xl tracking-[0.25em]">✨ RAHOUBA ✨</text>
+                    </svg>
+                </div>
+                <button onclick="activateConstellation()" id="constellation-btn" class="bg-gradient-to-r from-amber-400 to-pink-500 text-black font-extrabold px-6 py-2.5 rounded-full text-sm shadow-lg hover:scale-105 transition transform">شوفي فالسما ✨</button>
+            </div>
+
+            <!-- FLASHLIGHT EFFECT WRAPPER -->
+            <div id="flashlight-container" class="relative bg-[#05060b] p-8 md:p-14 rounded-[2.5rem] border-2 border-pink-400/20 shadow-[0_0_60px_rgba(236,72,153,0.15)] mb-16 overflow-hidden cursor-crosshair group" onmousemove="updateFlashlight(event)" ontouchmove="updateFlashlight(event.touches[0])">
+                
+                <div class="absolute inset-0 flex justify-center items-center pointer-events-none z-0">
+                </div>
+                
+                <div id="flashlight-mask" class="relative z-10 transition-opacity duration-300" style="--x: 50%; --y: 50%; -webkit-mask-image: radial-gradient(circle 140px at var(--x) var(--y), black 40%, transparent 100%); mask-image: radial-gradient(circle 140px at var(--x) var(--y), black 40%, transparent 100%);">
+                    <div class="text-center mb-8"><span class="text-4xl drop-shadow-md">💌</span><h3 class="font-english-script text-3xl md:text-5xl text-amber-300 mt-2 drop-shadow-md">A Secret Letter Just For You</h3><div class="w-32 h-0.5 bg-gradient-to-r from-transparent via-pink-400 to-transparent mx-auto mt-3"></div></div>
+                    <div id="letter-content" class="typewriter-cursor font-romantic text-xl md:text-2xl leading-loose text-white space-y-5 text-center whitespace-pre-line px-2 md:px-8 min-h-[220px] drop-shadow-md"></div>
+                    <div class="mt-12 text-center">
+                        <div class="inline-block bg-gradient-to-r from-pink-500/20 via-amber-500/20 to-pink-500/20 border border-amber-400/40 rounded-2xl py-4 px-8 backdrop-blur-sm">
+                            <p class="font-english-script text-2xl md:text-3xl text-amber-300 drop-shadow">From Casablanca to Ahfir... With All My Respect & Love ❤️🌹</p>
+                            <p class="text-xs text-pink-300 mt-1 font-english tracking-widest uppercase drop-shadow">Happy Birthday Rehab • Tsstahli Kol Khir</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="gift-box-container" class="max-w-md mx-auto text-center mb-16 cursor-pointer transform transition duration-300 hover:scale-105 select-none" onclick="unboxGift()">
+                <span class="font-english text-xs uppercase tracking-widest text-pink-400 font-bold mb-4 block">A Final Surprise 🎁</span>
+                <div id="the-gift" class="text-9xl transition-transform duration-300 drop-shadow-[0_0_40px_rgba(236,72,153,0.5)]">🎁</div>
+                <p id="gift-text" class="text-amber-300 mt-6 font-bold text-lg animate-pulse">كليكي على الكادو باش تحليه! (5 مرات)</p>
+            </div>
+
+            <div id="certificate-container" class="max-w-2xl mx-auto relative bg-gradient-to-b from-[#fffbeb] via-[#fef3c7] to-[#fde68a] text-gray-900 p-2 rounded-3xl shadow-[0_0_50px_rgba(251,191,36,0.35)] hidden opacity-0 scale-90 transition-all duration-1000" data-tilt>
+                <div class="border-4 border-double border-amber-700 rounded-2xl p-6 md:p-10 text-center relative overflow-hidden bg-white/60">
+                    <div class="text-4xl mb-2">👑</div>
+                    <p class="font-english text-xs uppercase tracking-[0.25em] text-amber-800 font-extrabold">Official Royal Certificate</p>
+                    <h3 class="font-english-script text-4xl md:text-5xl text-pink-700 mt-1 mb-4">Certificat d'Excellence</h3>
+                    <p class="text-sm md:text-base text-gray-700 mb-2">تشهد هاد الوثيقة الملكية الرسمية أن:</p>
+                    <div class="inline-block border-b-2 border-amber-600 px-8 py-1 mb-4">
+                        <span class="font-english text-2xl md:text-3xl font-extrabold text-gray-900 tracking-wider">✨ REHAB (TSAYNOU) ✨</span>
+                    </div>
+                    <p class="text-base md:text-lg font-bold text-gray-800 leading-relaxed max-w-lg mx-auto mb-6">
+                        هي رسمياً <span class="text-pink-600 font-extrabold">"أحسن وأغلى بنت فالعالم كامل"</span> 🌹👑
+                    </p>
+                    <div class="flex justify-between items-center border-t border-amber-600/30 pt-4 mt-4 text-xs font-english text-gray-700">
+                        <div class="text-right"><span class="block text-[10px] text-gray-500">DATE OF BIRTH</span><span class="font-bold">08 / 11 / 2006 🎂</span></div>
+                        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 text-white flex items-center justify-center font-extrabold text-[10px] shadow-md border-2 border-white rotate-12">100%<br>QUEEN</div>
+                        <div class="text-left"><span class="block text-[10px] text-gray-500">ORIGIN</span><span class="font-bold">CASA ➔ AHFIR ❤️</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // =======================
+        // MAGIC MOUSE TRAIL
+        // =======================
+        document.addEventListener('mousemove', function(e) {
+            const particle = document.createElement('div');
+            particle.className = 'magic-particle'; particle.innerText = '✨';
+            particle.style.left = e.clientX + 'px'; particle.style.top = e.clientY + 'px';
+            particle.style.transform = `rotate(${Math.floor(Math.random() * 360)}deg)`;
+            document.body.appendChild(particle);
+            setTimeout(() => particle.remove(), 1000);
+        });
+
+        // =======================
+        // FULLSCREEN & START LOGIC
+        // =======================
+        function startJourney() {
+            // Try to enter fullscreen
+            const docElm = document.documentElement;
+            if (docElm.requestFullscreen) {
+                docElm.requestFullscreen().catch(err => {
+                    console.log(`Error attempting to enable fullscreen: ${err.message}`);
+                });
+            } else if (docElm.mozRequestFullScreen) { /* Firefox */
+                docElm.mozRequestFullScreen();
+            } else if (docElm.webkitRequestFullScreen) { /* Chrome, Safari and Opera */
+                docElm.webkitRequestFullScreen();
+            } else if (docElm.msRequestFullscreen) { /* IE/Edge */
+                docElm.msRequestFullscreen();
+            }
+
+            // Hide start screen and start hacker terminal
+            document.getElementById('stage-start').classList.add('opacity-0');
+            setTimeout(() => {
+                document.getElementById('stage-start').classList.add('hidden');
+                const hackerStage = document.getElementById('stage-hacker');
+                hackerStage.classList.remove('hidden');
+                
+                // Start typing after a short delay
+                setTimeout(typeHacker, 1000);
+            }, 1000);
+        }
+
+
+        // =======================
+        // HACKER TERMINAL LOGIC (RehabOS Boot Version)
+        // =======================
+        const hackerLines = [
+            "RehabOS(tm) BIOS v20.0 (Queen Edition)",
+            "Copyright (C) 2026, Zaid Systems.",
+            "=========================================",
+            " ",
+            "Initializing Boot Sequence...",
+            "[ OK ] Checking RAM (Rehab's Amazing Memories)... 100%",
+            "[ OK ] Mounting /dev/heart_drive... Success ❤️",
+            "[ OK ] Loading Beautiful_Smile.dll... Loaded",
+            "[ OK ] Loading Queen_Vibes.sys... Loaded",
+            " ",
+            "SYSTEM ALERT: Casa-Ahfir distance firewall detected!",
+            "> Bypassing distance firewall...",
+            "> Decrypting secret files...",
+            " ",
+            "SYSTEM READY.",
+            "> Access Granted! Welcome to Rehab's Universe ✨"
+        ];
+        
+        // Removed the window.addEventListener('load') for typeHacker
+        // It's now called from startJourney()
+
+        let lineIdx = 0; let charIdx = 0;
+        
+        function typeHacker() {
+            const hackerText = document.getElementById('hacker-text');
+            const hackerStage = document.getElementById('stage-hacker');
+            const iphoneStage = document.getElementById('stage-iphone');
+
+            if (lineIdx < hackerLines.length) {
+                // Ila kan ster khawi (space), n9z l'ster li morah
+                if (hackerLines[lineIdx] === " ") {
+                    hackerText.innerHTML += "<br>";
+                    lineIdx++; charIdx = 0;
+                    setTimeout(typeHacker, 100);
+                    return;
+                }
+
+                if (charIdx < hackerLines[lineIdx].length) {
+                    hackerText.innerHTML += hackerLines[lineIdx].charAt(charIdx); 
+                    charIdx++;
+                    
+                    // Sra3 lktba f stoura dyal BIOS (mn 0 tal 8), w t9el f l'hacker text (mn 9 lfo9)
+                    let typeSpeed = (lineIdx < 9) ? 10 : (30 + Math.random() * 40);
+                    setTimeout(typeHacker, typeSpeed);
+                } else {
+                    hackerText.innerHTML += "<br>"; 
+                    lineIdx++; charIdx = 0;
+                    
+                    // W9fa bin stoura (pause). Stoura l'hacker kayakhdo w9t ktr bach ybano m9wdin
+                    let pause = (lineIdx < 9) ? 150 : 600;
+                    setTimeout(typeHacker, pause);
+                }
+            } else {
+                // Mli tsali l'ktba kamla, tsna 2 tawan w dkhl l'iPhone
+                setTimeout(() => {
+                    hackerStage.classList.add('opacity-0');
+                    setTimeout(() => {
+                        hackerStage.classList.add('hidden');
+                        iphoneStage.classList.remove('hidden');
+                        initIphone();
+                    }, 1000);
+                }, 2000);
+            }
+        }
+
+
+        function initIphone() {
+            const timeEl = document.getElementById('iphone-time');
+            const d = new Date(); let h = d.getHours(); let m = d.getMinutes();
+            if(timeEl) timeEl.innerText = `${h < 10 ? '0'+h : h}:${m < 10 ? '0'+m : m}`;
+            
+            VanillaTilt.init(document.querySelector("#iphone-hardware"));
+
+            setTimeout(() => {
+                const notif = document.getElementById('whatsapp-notif');
+                notif.classList.remove('hidden'); notif.classList.add('notif-anim');
+                const waSound = document.getElementById('wa-audio');
+                if(waSound) waSound.play().catch(e => console.log("WA Audio Blocked"));
+            }, 3000);
+        }
+
+        function openSpotify() {
+            const iphone = document.getElementById('iphone-hardware');
+            iphone.classList.add('iphone-zoom-out');
+            setTimeout(() => {
+                document.getElementById('stage-iphone').classList.add('hidden');
+                document.getElementById('stage-spotify').classList.remove('hidden');
+                window.scrollTo(0,0);
+            }, 800);
+        }
+
+        // =======================
+        // NETFLIX DATA ARRAYS (TBDLO B 3ONWAN DYAL AFLAM)
+        // =======================
+        const rehabBirthDate = new Date("2006-11-08T00:00:00");
+        const songsList = [
+            { title: "Adele - Lovesong✨", file: "music/song1.mp3" }, { title: "JSMN - Love Me 🎶", file: "music/song2.mp3" }, { title: "STORMY FT MANAL - SATA 9ATTALA 🌹", file: "music/song3.mp3" }, { title: "KAROL G - Si Antes Hubiera Conocido💫", file: "music/song4.mp3" }, { title: "DADJU,ANITTA -Mon Soleil🎉", file: "music/song5.mp3" }
+        ];
+        const quizQuestions = [
+            { question: "Question 1: فين تعرفنا نهار لول ؟ 🤔", options: ["LWA9I3", "AMONG US", "FREE FIRE"], correct: 1 }, { question: "Question 2: شنو هي لبلاصة لي بغيت نعيش فيها ؟ 🤔", options: ["9albk", "muzambiQ", "mghrib"], correct: 0 }, { question: "Last Question: شكون هي أحسن و أغلى بنت ف العالم كامل ؟👑", options: ["Rehab ✨", "رحاب 🌹", "All of the above ❤️"], correct: 2 }
+        ];
+        
+        const roadStations = [
+            { city: "🎬 EP 1: The Casa Origins", type: "image", media: "images/station1.jpg", message: "B7al l'bidaya dyal ay film wa3r, mn Casa bdat l'9issa... واخا المسافة بعيدة راكي ديما قريبة فالبال ✨🍿" }, 
+            { city: "🏆 EP 2: Tsaynou's Masterpiece", type: "image", media: "images/station2.jpg", message: "Had l'image khasha takhed Oscar 🌟 كاينين شي ناس غير كيدخلو لحياتك كيزيدوها ضو، ونتي أولهم 🌸" }, 
+            { city: "🎥 EP 3: Behind The Scenes", type: "video", media: "images/video1.mp4", message: "🎬! Warning: Too much cuteness and craziness in one video! هاد الفيديو خاصو يتحط فـ Netflix ماشي تليفون 😂❤️" }, 
+            { city: "👑 SEASON FINALE: Destination Ahfir", type: "image", media: "images/station4.jpg", message: "L'7el9a l'lekhra li katsali b' Happy End! 🎬 وصلنا لأحفير... هبطي لتحت وحلي المفاجأة الكبيرة ديال عيد ميلادك 🎂✨" }
+        ];
+
+        const finalPhotos = [
+            { src: "images/final1.jpg", caption: "Pure Beauty 🌹" }, { src: "images/final2.jpg", caption: "Birthday Queen 👑✨" }, { src: "images/final3.jpg", caption: "Keep Smiling Always 🌸" }
+        ];
+        const birthdayLetterText = `Happy Birthday Rehab! 🌹✨\nاليوم ماشي غير نهار عادي فـ Calendar، اليوم تزادت فيه واحد الإنسانة لي بزاف سبيسيال وخلات بلاصة كبيرة وبصمة زوينة فحياتي.\nEven though there is a long distance between Casablanca and Ahfir, المسافة عمرها كانت حاجز، حيت بحال نتي بقلبك الزوين، ضحكتك النقية، وهضرتك لي ما كيتشبعش منها، كتخلي أي نهار يولي أحسن بألف مرة.\nYou truly deserve the world and more! فهاد العام الجديد ديالك، كنتمنى ليك من قلبي كل ما كتمنّاي فخاطرك: النجاح، الفرحة لي ما كتساليش، وراحة البال.\nNever change who you are, وبقاي ديما ديك رحاب الضحوكية والغزالة لي كتنور أي بلاصة كانت فيها.\nWishing you the happiest birthday ever... كل عام ونتي بألف خير يا أحسن بنت! 🎂🌷❤️`;
+
+        // =======================
+        // SPOTIFY LOGIC
+        // =======================
+        const audioPlayer = document.getElementById('bg-audio');
+        const songsContainer = document.getElementById('songs-container');
+        let currentSongTitle = ""; let wasBgMusicPlaying = false;
+
+        songsList.forEach((song, index) => {
+            const div = document.createElement('div');
+            div.className = "song-item flex items-center justify-between bg-gray-800/70 hover:bg-gray-800 p-4 rounded-2xl cursor-pointer border border-transparent transition duration-300";
+            div.onclick = () => selectSong(index, div);
+            div.innerHTML = `<div class="flex items-center gap-4"><span class="font-english text-green-400 font-bold w-6 text-lg">0${index + 1}</span><div><p class="font-bold text-white text-base md:text-lg">${song.title}</p></div></div><span class="font-english bg-green-500/10 text-green-400 border border-green-500/30 px-4 py-1.5 rounded-full text-xs font-bold">Play ▶</span>`;
+            songsContainer.appendChild(div);
+        });
+
+        function selectSong(index, element) {
+            document.querySelectorAll('.song-item').forEach(el => { el.classList.remove('border-green-500', 'bg-green-900/20'); });
+            element.classList.add('border-green-500', 'bg-green-900/20');
+            const chosen = songsList[index]; currentSongTitle = chosen.title;
+            audioPlayer.src = chosen.file; audioPlayer.volume = 1; audioPlayer.play().catch(() => {});
+            const vinyl = document.getElementById('vinyl-disc');
+            if (vinyl) { vinyl.classList.add('vinyl-spin'); vinyl.classList.remove('vinyl-paused'); }
+            document.getElementById('mini-player').classList.remove('hidden');
+            document.getElementById('now-playing-text').innerText = `🎵 Playing: ${chosen.title}`;
+            document.getElementById('play-pause-btn').innerText = "Pause ⏸";
+            document.getElementById('spotify-next-container').classList.remove('hidden');
+        }
+
+        function togglePlay() {
+            const btn = document.getElementById('play-pause-btn'); const vinyl = document.getElementById('vinyl-disc');
+            if (audioPlayer.paused) { audioPlayer.play(); btn.innerText = "Pause ⏸"; if (vinyl) vinyl.classList.remove('vinyl-paused'); } else { audioPlayer.pause(); btn.innerText = "Play ▶"; if (vinyl) vinyl.classList.add('vinyl-paused'); }
+        }
+
+        function goToStage(stageId) {
+            exitCinemaMode();
+            ['stage-start', 'stage-iphone', 'stage-spotify', 'stage-escape', 'stage-cutscene', 'stage-map', 'stage-cake'].forEach(id => {
+                const el = document.getElementById(id); if (el) el.classList.add('hidden');
+            });
+            document.getElementById(stageId).classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // =======================
+        // ESCAPE ROOM LOGIC
+        // =======================
+        function toggleHint() { document.getElementById('password-hint').classList.toggle('hidden'); }
+        function checkLogin() {
+            const user = document.getElementById('login-input').value.trim().toLowerCase();
+            const pass = document.getElementById('password-input').value.trim().toLowerCase();
+            if (user === 'rehab' && pass === 'tsaynou') {
+                document.getElementById('login-box').classList.add('hidden');
+                document.getElementById('amongus-box').classList.remove('hidden');
+            } else { document.getElementById('login-error').classList.remove('hidden'); }
+        }
+
+        let selectedLeftColor = null; let selectedLeftBtn = null; let connectedWires = []; const wireStrokeColors = { red: '#ef4444', blue: '#3b82f6', yellow: '#fbbf24', pink: '#ec4899' };
+        function selectLeftWire(color, btnElement) { if (connectedWires.includes(color)) return; document.querySelectorAll('.left-wire').forEach(b => b.classList.remove('wire-selected')); selectedLeftColor = color; selectedLeftBtn = btnElement; btnElement.classList.add('wire-selected'); }
+        function selectRightWire(color, rightBtnElement) {
+            if (!selectedLeftColor || connectedWires.includes(color)) return; const statusText = document.getElementById('amongus-status');
+            if (selectedLeftColor === color) {
+                connectedWires.push(color); selectedLeftBtn.classList.remove('wire-selected'); selectedLeftBtn.classList.add('opacity-60', 'cursor-default'); rightBtnElement.classList.add('opacity-60', 'cursor-default');
+                drawWireLine(selectedLeftBtn, rightBtnElement, wireStrokeColors[color]);
+                document.getElementById('wire-progress').innerText = `${connectedWires.length} / 4 WIRES`; selectedLeftColor = null; selectedLeftBtn = null;
+                if (connectedWires.length === 4) {
+                    statusText.className = "text-sm mt-4 font-extrabold text-green-400 animate-bounce"; statusText.innerText = "✅ TASK COMPLETED! برافو عليك أ رحاب، دابا نكملو الكويز ✨";
+                    setTimeout(() => { document.getElementById('amongus-box').classList.add('hidden'); document.getElementById('questions-box').classList.remove('hidden'); loadQuestion(0); }, 1200);
+                } else { statusText.className = "text-sm mt-4 font-bold text-amber-300"; statusText.innerText = "⚡ كملي الخيوط لي بقاو..."; }
+            } else { statusText.className = "text-sm mt-4 font-bold text-red-400"; statusText.innerText = "❌ ماشي نفس اللون! اختاري اللون الصحيح 😂"; selectedLeftBtn.classList.remove('wire-selected'); selectedLeftColor = null; selectedLeftBtn = null; }
+        }
+        function drawWireLine(leftEl, rightEl, strokeColor) {
+            const board = document.getElementById('wiring-board'); const svg = document.getElementById('wires-svg'); const boardRect = board.getBoundingClientRect(); const leftRect = leftEl.getBoundingClientRect(); const rightRect = rightEl.getBoundingClientRect();
+            const x1 = leftRect.right - boardRect.left; const y1 = leftRect.top - boardRect.top + leftRect.height / 2; const x2 = rightRect.left - boardRect.left; const y2 = rightRect.top - boardRect.top + rightRect.height / 2;
+            const line = document.createElementNS('http://www.w3.org/2000/svg', 'line'); line.setAttribute('x1', x1); line.setAttribute('y1', y1); line.setAttribute('x2', x2); line.setAttribute('y2', y2); line.setAttribute('stroke', strokeColor); line.setAttribute('stroke-width', '8'); line.setAttribute('stroke-linecap', 'round'); svg.appendChild(line);
+        }
+
+        let currentQ = 0;
+        function loadQuestion(index) {
+            const q = quizQuestions[index]; document.getElementById('question-counter').innerText = `Question ${index + 1} / ${quizQuestions.length}`; document.getElementById('question-text').innerText = q.question;
+            const opts = document.getElementById('options-container'); opts.innerHTML = ''; document.getElementById('quiz-feedback').classList.add('hidden');
+            q.options.forEach((optText, i) => { const btn = document.createElement('button'); btn.className = "w-full text-right bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-pink-500/50 p-4 rounded-xl font-semibold transition"; btn.innerText = optText; btn.onclick = () => checkAnswer(i); opts.appendChild(btn); });
+        }
+        function checkAnswer(selectedIndex) {
+            const feedback = document.getElementById('quiz-feedback'); feedback.classList.remove('hidden');
+            if (selectedIndex === quizQuestions[currentQ].correct) {
+                feedback.className = "text-sm mt-4 text-center font-bold text-green-400"; feedback.innerText = "✅ Correct! جواب صحيح برافو عليك ✨";
+                setTimeout(() => { 
+                    currentQ++; 
+                    if (currentQ < quizQuestions.length) { 
+                        loadQuestion(currentQ); 
+                    } else { 
+                        // MODIFIED HERE: Show BOOYAH instead of Ticket
+                        document.getElementById('questions-box').classList.add('hidden'); 
+                        document.getElementById('booyah-box').classList.remove('hidden'); 
+                    } 
+                }, 900);
+            } else { feedback.className = "text-sm mt-4 text-center font-bold text-red-400"; feedback.innerText = "❌ Oops! ماشي هادا، عاودي جربي 😂"; }
+        }
+
+        // NEW FUNCTION: From BOOYAH to Ticket
+        function showTicketFromBooyah() {
+            document.getElementById('booyah-box').classList.add('hidden');
+            document.getElementById('ticket-box').classList.remove('hidden');
+        }
+
+        let ticketAlreadyTorn = false;
+        function tearTicket() {
+            if (ticketAlreadyTorn) return; ticketAlreadyTorn = true;
+            const stamp = document.getElementById('royal-stamp'); const stampSound = document.getElementById('stamp-audio');
+            if (stamp) stamp.classList.add('stamp-active'); if(stampSound) { stampSound.volume = 1; stampSound.currentTime = 0; stampSound.play().catch(e => console.log(e)); }
+            setTimeout(() => { document.getElementById('ticket-top').classList.add('ticket-torn-top'); document.getElementById('ticket-bottom').classList.add('ticket-torn-bottom'); }, 2200);
+            setTimeout(() => { startBirthdayCutscene(); }, 3600);
+        }
+
+        // =======================
+        // FULL SCREEN CINEMATIC CAR
+        // =======================
+        function startBirthdayCutscene() {
+            goToStage('stage-cutscene');
+            const calBody = document.getElementById('cal-body'); const weekdayEl = document.getElementById('cal-weekday'); const dayNum = document.getElementById('cal-day-num'); const subText = document.getElementById('cal-subtext'); const calCard = document.getElementById('cal-card');
+            const daysSequence = [
+                { weekday: "THURSDAY", num: "05", text: "3 Days Left... ⏳" }, { weekday: "FRIDAY", num: "06", text: "2 Days Left... ✨" }, { weekday: "SATURDAY", num: "07", text: "Tomorrow Is The Big Day! 💓" }, { weekday: "SUNDAY", num: "08", text: "🎂 HAPPY BIRTHDAY REHAB! 👑🌹" }
+            ];
+            let step = 0;
+            const calInterval = setInterval(() => {
+                if (step < daysSequence.length) {
+                    calBody.classList.remove('calendar-flip'); void calBody.offsetWidth; calBody.classList.add('calendar-flip');
+                    weekdayEl.innerText = daysSequence[step].weekday; dayNum.innerText = daysSequence[step].num; subText.innerText = daysSequence[step].text;
+                    if (daysSequence[step].num === "08") { calCard.classList.add('calendar-final-glow'); subText.className = "text-sm sm:text-base text-amber-300 mt-4 block font-extrabold animate-bounce"; launchConfetti(); }
+                    step++;
+                } else { clearInterval(calInterval); setTimeout(startMercedesScene, 3000); }
+            }, 1600);
+        }
+
+        function startMercedesScene() {
+            document.getElementById('cutscene-calendar').classList.add('hidden');
+            const mercScene = document.getElementById('cutscene-mercedes'); mercScene.classList.remove('hidden');
+            const sign = document.getElementById('highway-sign'); const progress = document.getElementById('merc-progress'); const kmText = document.getElementById('km-counter-text');
+            sign.classList.add('highway-sign-anim');
+            setTimeout(() => { progress.style.width = "35%"; if (kmText) kmText.innerText = "400 km"; }, 600);
+            setTimeout(() => { progress.style.width = "75%"; if (kmText) kmText.innerText = "150 km"; document.getElementById('sign-city-text').innerText = "🏁 WELCOME TO AHFIR ❤️"; }, 2600);
+            setTimeout(() => { progress.style.width = "100%"; if (kmText) kmText.innerText = "0 km (Arrivés !)"; }, 4600);
+            setTimeout(() => { goToStage('stage-map'); }, 5500);
+        }
+        function accelerateCar() {
+            document.getElementById('the-road-lines').classList.add('road-lines-fast'); document.getElementById('the-mercedes').classList.add('mercedes-cruise-fast'); document.getElementById('exhaust-fire').classList.add('exhaust-flame-active');
+            const btn = document.getElementById('accel-btn'); btn.innerText = "SPEED MAX 🚀"; btn.classList.remove('animate-bounce'); btn.classList.add('scale-110', 'bg-red-700', 'border-red-400'); btn.style.pointerEvents = 'none';
+        }
+
+        // =======================
+        // REHABFLIX LOGIC
+        // =======================
+        const timelineContainer = document.getElementById('timeline-container');
+        roadStations.forEach((st) => {
+            const item = document.createElement('div');
+            item.className = "flex-none w-[280px] md:w-[350px] snap-center group";
+            let mediaHTML = ''; let playBtn = '';
+            
+            if (st.type === 'video') {
+                mediaHTML = `<video src="${st.media}" class="w-full h-48 md:h-56 object-cover rounded-md group-hover:opacity-40 transition duration-500"></video>`;
+                playBtn = `<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 z-20"><button onclick="playNetflixVideo('${st.media}')" class="w-14 h-14 rounded-full border-2 border-white flex items-center justify-center bg-black/60 hover:bg-white text-white hover:text-black transition"><span class="ml-1 text-2xl">▶</span></button></div>`;
+            } else {
+                mediaHTML = `<img src="${st.media}" onerror="this.src='https://via.placeholder.com/600x350/141414/e11d48?text=Special+Memory+🌹'" class="w-full h-48 md:h-56 object-cover rounded-md group-hover:opacity-40 transition duration-500">`;
+            }
+
+            item.innerHTML = `
+                <div class="relative transform transition-all duration-500 group-hover:scale-110 group-hover:z-30 cursor-pointer shadow-lg bg-[#181818] rounded-md">
+                    ${mediaHTML}
+                    ${playBtn}
+                    <div class="absolute top-2 left-2 bg-red-600 text-white text-[10px] font-english font-bold px-2 py-0.5 rounded shadow">TOP 1</div>
+                    <div class="absolute bottom-0 w-full p-4 bg-gradient-to-t from-black via-black/90 to-transparent opacity-0 group-hover:opacity-100 transition duration-500 rounded-b-md flex flex-col justify-end translate-y-2 group-hover:translate-y-0">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-green-500 font-bold text-xs font-english">99% Match</span>
+                            <span class="border border-gray-400 text-gray-300 text-[10px] px-1 font-english">HD</span>
+                        </div>
+                        <h4 class="text-white font-extrabold text-sm md:text-base mb-1">${st.city}</h4>
+                        <p class="text-[10px] md:text-xs text-gray-300 line-clamp-3">${st.message}</p>
+                    </div>
+                </div>
+            `;
+            timelineContainer.appendChild(item);
+        });
+
+        const cinemaOverlay = document.getElementById('cinema-overlay');
+        
+        function playNetflixVideo(src) {
+            if (!audioPlayer.paused) { wasBgMusicPlaying = true; audioPlayer.pause(); }
+            cinemaOverlay.innerHTML = `
+                <div class="relative w-full max-w-4xl mx-auto mt-20 flex flex-col items-center">
+                    <video id="comfort-video" src="${src}" controls autoplay class="w-full rounded-xl shadow-2xl border border-gray-700 bg-black"></video>
+                    <button onclick="exitCinemaMode()" class="mt-6 bg-red-600 text-white font-bold text-lg px-8 py-2 rounded-full hover:bg-red-700 transition shadow-lg">Close Video ✖</button>
+                </div>
+            `;
+            cinemaOverlay.classList.remove('hidden');
+            setTimeout(() => { cinemaOverlay.classList.remove('opacity-0'); cinemaOverlay.classList.add('opacity-100'); }, 20);
+        }
+
+        function exitCinemaMode() {
+            if (!cinemaOverlay || cinemaOverlay.classList.contains('hidden')) return;
+            const vid = document.getElementById('comfort-video'); if(vid) vid.pause();
+            cinemaOverlay.classList.remove('opacity-100'); cinemaOverlay.classList.add('opacity-0');
+            setTimeout(() => { cinemaOverlay.classList.add('hidden'); cinemaOverlay.innerHTML = ''; }, 600);
+            if (wasBgMusicPlaying) { wasBgMusicPlaying = false; audioPlayer.play().catch(() => {}); }
+        }
+
+        // =======================
+        // CAKE & FINAL LOGIC
+        // =======================
+        document.getElementById('final-img-1').src = finalPhotos[0].src; document.getElementById('final-cap-1').innerText = finalPhotos[0].caption;
+        document.getElementById('final-img-2').src = finalPhotos[1].src; document.getElementById('final-cap-2').innerText = finalPhotos[1].caption;
+        document.getElementById('final-img-3').src = finalPhotos[2].src; document.getElementById('final-cap-3').innerText = finalPhotos[2].caption;
+
+        let typewriterStarted = false;
+        function startTypewriter() {
+            if (typewriterStarted) return; typewriterStarted = true; const text = birthdayLetterText.trim(); const container = document.getElementById('letter-content'); container.innerText = ''; let i = 0;
+            function typeChar() { if (i < text.length) { container.innerText += text.charAt(i); i++; setTimeout(typeChar, 35); } else { container.classList.remove('typewriter-cursor'); } }
+            typeChar();
+        }
+
+        function activateConstellation() { document.getElementById('constellation-box').classList.add('constellation-active'); document.getElementById('constellation-btn').innerText = "✨ سميتك ضوات فالسما أ رحاب ✨"; }
+
+        let candlesBlown = [false, false, false];
+        function blowCandle(index) {
+            if (!candlesBlown[index]) { candlesBlown[index] = true; document.getElementById(`flame-${index}`).style.display = 'none'; }
+            if (candlesBlown.every(c => c === true)) {
+                document.getElementById('candle-instruction').innerText = "✨ الشمع طفا! دابا كتبي أمنيتك فالصندوق لتحت وصيفطيها للنجوم 🌠";
+                launchConfetti(); startFallingRoses();
+                const wishBox = document.getElementById('wish-box'); wishBox.classList.remove('hidden'); setTimeout(() => { wishBox.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 200);
+            }
+        }
+
+        function sendWishToStars() {
+            const wishInput = document.getElementById('wish-input').value.trim(); const previewText = wishInput ? wishInput : "أمنية فـ قلب رحاب ✨";
+            document.getElementById('wish-form-content').classList.add('hidden'); const flyingArea = document.getElementById('flying-wish-star'); document.getElementById('star-wish-preview').innerText = previewText; flyingArea.classList.remove('hidden'); document.getElementById('star-fly-item').classList.add('shoot-wish-anim'); launchConfetti();
+            setTimeout(() => {
+                const cakeSec = document.getElementById('cake-section'); cakeSec.classList.add('opacity-0', 'scale-90');
+                setTimeout(() => {
+                    cakeSec.classList.add('hidden'); const letterSec = document.getElementById('special-letter'); letterSec.classList.remove('hidden');
+                    setTimeout(() => { letterSec.classList.remove('opacity-0', 'scale-95'); letterSec.classList.add('opacity-100', 'scale-100'); window.scrollTo({ top: 0, behavior: 'smooth' }); setTimeout(startTypewriter, 600); }, 100);
+                }, 700);
+            }, 2000);
+        }
+
+        // UPDATE FLASHLIGHT MOUSE TRACKING
+        function updateFlashlight(e) {
+            const mask = document.getElementById('flashlight-mask');
+            const container = document.getElementById('flashlight-container');
+            if(!mask || !container) return;
+            const rect = container.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            mask.style.setProperty('--x', `${x}px`);
+            mask.style.setProperty('--y', `${y}px`);
+        }
+
+        function startFallingRoses() {
+            const container = document.getElementById('petals-container'); if (container.children.length > 0) return; const emojis = ['🌹', '🌸', '🌷', '✨', '💖', '🌺'];
+            for (let i = 0; i < 28; i++) {
+                const petal = document.createElement('div'); petal.className = 'falling-petal'; petal.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+                petal.style.left = Math.random() * 100 + 'vw'; petal.style.fontSize = (Math.random() * 16 + 16) + 'px'; petal.style.animationDuration = (Math.random() * 5 + 5) + 's'; petal.style.animationDelay = (Math.random() * 4) + 's'; container.appendChild(petal);
+            }
+        }
+
+        function launchConfetti() {
+            const duration = 4 * 1000; const end = Date.now() + duration;
+            (function frame() { confetti({ particleCount: 6, angle: 60, spread: 55, origin: { x: 0 }, colors: ['#ec4899', '#f43f5e', '#fbbf24', '#a855f7'] }); confetti({ particleCount: 6, angle: 120, spread: 55, origin: { x: 1 }, colors: ['#ec4899', '#f43f5e', '#fbbf24', '#a855f7'] }); if (Date.now() < end) { requestAnimationFrame(frame); } }());
+        }
+
+        let boxClicks = 0;
+        function unboxGift() {
+            if (boxClicks >= 5) return; boxClicks++; const gift = document.getElementById('the-gift'); const text = document.getElementById('gift-text');
+            gift.classList.remove('gift-shake'); void gift.offsetWidth; 
+            if (boxClicks < 5) { gift.classList.add('gift-shake'); let left = 5 - boxClicks; text.innerText = `باقي ليك ${left} كليكات! زيدي... 😂`; } 
+            else {
+                gift.classList.add('gift-explode'); text.innerText = "Tadaaaa! 🎉"; launchConfetti();
+                setTimeout(() => { document.getElementById('gift-box-container').classList.add('hidden'); const cert = document.getElementById('certificate-container'); cert.classList.remove('hidden'); setTimeout(() => { cert.classList.remove('opacity-0', 'scale-90'); cert.classList.add('opacity-100', 'scale-100'); cert.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 50); }, 800);
+            }
+        }
+
+        function updateBirthdayCounter() {
+            const now = new Date(); let years = now.getFullYear() - rehabBirthDate.getFullYear(); let lastBirthday = new Date(now.getFullYear(), rehabBirthDate.getMonth(), rehabBirthDate.getDate());
+            if (now < lastBirthday) { years--; lastBirthday = new Date(now.getFullYear() - 1, rehabBirthDate.getMonth(), rehabBirthDate.getDate()); }
+            const diff = now - lastBirthday; const days = Math.floor(diff / (1000 * 60 * 60 * 24)); const hours = Math.floor((diff / (1000 * 60 * 60)) % 24); const minutes = Math.floor((diff / 1000 / 60) % 60); const seconds = Math.floor((diff / 1000) % 60);
+            document.getElementById('cnt-years').innerText = years; document.getElementById('cnt-days').innerText = days; document.getElementById('cnt-hours').innerText = hours < 10 ? '0' + hours : hours; document.getElementById('cnt-minutes').innerText = minutes < 10 ? '0' + minutes : minutes; document.getElementById('cnt-seconds').innerText = seconds < 10 ? '0' + seconds : seconds;
+        }
+        setInterval(updateBirthdayCounter, 1000); updateBirthdayCounter();
+    </script>
+</body>
+</html>
